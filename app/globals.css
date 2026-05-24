@@ -260,6 +260,23 @@ h1 {
   max-width: 640px;
 }
 
+.proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.proof-row span {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 11px;
+}
+
 .button-row {
   display: flex;
   flex-wrap: wrap;
@@ -311,6 +328,20 @@ h1 {
   padding: 20px;
 }
 
+.demo-card {
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.demo-output {
+  margin-top: 14px;
+  min-height: 190px;
+}
+
 .preview-script {
   background:
     linear-gradient(135deg, rgba(255, 59, 47, 0.12), transparent 36%),
@@ -328,6 +359,31 @@ h1 {
   gap: 22px;
   grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
   padding: 28px clamp(18px, 4vw, 56px) 56px;
+}
+
+.trust-band {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 0 clamp(18px, 4vw, 56px) 36px;
+  position: relative;
+  z-index: 1;
+}
+
+.trust-band div {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  color: #fff;
+  display: grid;
+  gap: 6px;
+  padding: 16px;
+}
+
+.trust-band span {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.45;
 }
 
 .generator {
@@ -491,7 +547,8 @@ h1 {
 
 @media (max-width: 920px) {
   .hero,
-  .dashboard {
+  .dashboard,
+  .trust-band {
     grid-template-columns: 1fr;
   }
 

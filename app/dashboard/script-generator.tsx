@@ -329,7 +329,11 @@ export default function DashboardClient({
         <div style={{ height: 16 }} />
 
         <div className="generator">
-          <strong>Recent scripts</strong>
+          <strong>Saved script history</strong>
+          <p className="muted">
+            Every generated script is saved to your account so you can come back
+            and reuse ideas later.
+          </p>
           <div className="history-list" style={{ marginTop: 12 }}>
             {scripts.length ? (
               scripts.map((script) => (
